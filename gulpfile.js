@@ -60,7 +60,7 @@ gulp.task('browsersync', () => {
     }
   });
   gulp.watch(
-    ['src/sass/**/*.scss', 'src/js/*.js'],
+    ['src/sass/**/*.scss', 'src/js/*.js', 'src/templates/**/*.html.twig'],
     gulp.series('build', browserSync.reload)
   );
 });

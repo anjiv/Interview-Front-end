@@ -1,0 +1,5 @@
+{% set image_base_class = image_base_class|default('img') %}
+
+{% if img_src %}
+  <img class="{{ image_base_class }}" src="{{ img_src }}" alt="{{ img_alt }}" />
+{% endif %}

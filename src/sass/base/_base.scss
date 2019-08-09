@@ -1,0 +1,18 @@
+$grid-columns: 12;
+$width: 100%;
+$max-width-mobile: 345px;
+$max-width-desktop: 1180px;
+$gutter: 30px;
+
+%layout-container-styles {
+  max-width: $max-width-mobile;
+  margin: auto;
+  padding-right: $gutter/2;
+  padding-left: $gutter/2;
+  @media screen and (min-width: 992px) {
+    max-width: $max-width-desktop;
+  }
+}
+body {
+  width: 100%;
+}
