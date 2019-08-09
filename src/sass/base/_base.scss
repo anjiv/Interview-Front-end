@@ -1,18 +1,34 @@
 $grid-columns: 12;
 $width: 100%;
 $max-width-mobile: 345px;
-$max-width-desktop: 1180px;
+$max-width-desktop: 1200px;
 $gutter: 30px;
 
-%layout-container-styles {
-  max-width: $max-width-mobile;
-  margin: auto;
-  padding-right: $gutter/2;
-  padding-left: $gutter/2;
-  @media screen and (min-width: 992px) {
-    max-width: $max-width-desktop;
-  }
-}
+// @mixin layout-container-styles() {
+//   max-width: $max-width-mobile;
+//   margin: auto;
+//   padding-right: $gutter/2;
+//   padding-left: $gutter/2;
+//   @media screen and (min-width: 992px) {
+//     max-width: $max-width-desktop;
+//   }
+// }
 body {
   width: 100%;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.primary-color {
+  color: $primary;
+}
+.primary-button {
+  background-color: $primary;
+  color: $white;
+}
+.a-btn {
+  border-radius: 20px;
+  padding: 10px 20px;
 }

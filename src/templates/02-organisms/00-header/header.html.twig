@@ -1,0 +1,26 @@
+<header class="header">
+  <div class="header-container">
+    <div class="site_logo">
+      <a href="/" class="site_logo-text">Company<span class="primary-color">Logo</span></a>
+    </div>
+    <div class="header__menu">
+      {% set items = [{
+        url: '/',
+        title: 'About',
+        extra_classes: 'active'
+      },{
+        url: '/',
+        title: 'Services'
+      },{
+        url: '/',
+        title: 'Solution'
+      },{
+        url: '/',
+        title: 'Blog'
+      }]
+      %}
+      {% include "../../01-molecules/00-menu/menu.html.twig" with items %}
+    </div>
+    {% include "../../01-molecules/01-header-button/header-button.html.twig" %}
+  </div>
+</header>

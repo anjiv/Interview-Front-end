@@ -1,24 +1,10 @@
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Axelerant: Interview Frontend</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Axelerant: Interview Frontend</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h3>Welcome</h3>
-  {% include "00-atoms/02-button/button.html.twig" with {
-    text: "button"
-  }%}
-  {% set items = [{
-    url: '/',
-    title: 'About'
-  },{
-    url: '/',
-    title: 'test'
-  },{
-    url: '/',
-    title: 'css'
-  }]
-  %}
-  {% include "01-molecules/00-menu/menu.html.twig" with items %}
+  {% include "02-organisms/00-header/header.html.twig" %}
+  {% include "02-organisms/01-banner/banner.html.twig" %}
 </body>
