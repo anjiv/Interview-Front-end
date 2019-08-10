@@ -1,0 +1,16 @@
+footer {
+  background-color: $dark-background;
+}
+
+.footer-wrapper {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  color: $secondary;
+}
+
+.footer__social {
+  img {
+    padding: 0 5px;
+  }
+}
