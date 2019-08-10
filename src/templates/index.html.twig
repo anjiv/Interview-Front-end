@@ -1,15 +1,18 @@
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Axelerant: Interview Frontend</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="header">
-      {% include "02-organisms/00-header/header.html.twig" %}
-    </header>
-    <section class="banner">
-      {% include "02-organisms/01-banner/banner.html.twig" %}
-    </section>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Axelerant: Interview Frontend</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    {% include "02-organisms/00-header/header.html.twig" %}
+  </header>
+  <section class="banner">
+    {% include "02-organisms/01-banner/banner.html.twig" %}
+  </section>
+  <section class="main-content">
+    {% include "02-organisms/02-map-content/map-content.html.twig" %}
+  </section>
+</body>
 </html>
