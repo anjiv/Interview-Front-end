@@ -1,0 +1,3 @@
+{% set textarea_base_class = textarea_base_class|default('textarea') %}
+
+<textarea class="{{ textarea_base_class }} {{extra_classes}}"  placeholder="{{ placeholder_text }}">{{ value }}</textarea>
