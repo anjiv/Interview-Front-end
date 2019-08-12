@@ -2,7 +2,7 @@
   <div class="banner-wrapper">
     <div class="banner__heading">
       {% include "../../00-atoms/03-heading/heading.html.twig" with {
-        heading_level: 3,
+        heading_level: 1,
         heading: "Integer bibendum sit amet arcu vel egestas."
       } %}
     </div>
@@ -25,7 +25,7 @@
       </div>
       <div class="service-wrapper">
         {% include "../../00-atoms/00-image/image.html.twig" with {
-          image_base_class: "banner-service",
+          image_base_class: "banner-service service-name",
           img_src: "images/service-icon-3.png",
           img_alt: "service-icon-3"
         } %}
