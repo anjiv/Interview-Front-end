@@ -61,6 +61,35 @@
 
   .a-link {
     color: $header-footer;
+    &:hover {
+      color: $button;
+    }
+  }
+
+  .header__menu--mobile {
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+
+    ul {
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      z-index: 2;
+      padding: 75px 15px 50px;
+      background: #212121;
+      transition: all 0s ease -0.5s;
+
+      li {
+        padding: 10px 0;
+      }
+    }
+
+    .a-link {
+      color: $white;
+    }
   }
 
   .active,
@@ -78,31 +107,6 @@
 }
 
 // Hamburger menu
-.header__menu--mobile {
-  @media screen and (min-width: 992px) {
-    display: none;
-  }
-
-  ul {
-    display: block;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    z-index: 2;
-    padding: 75px 15px 50px;
-    background: #212121;
-    transition: all 0s ease -0.5s;
-
-    li {
-      padding: 10px 0;
-      .a-link {
-        color: $white;
-      }
-    }
-  }
-}
-
 #nav-toggle {
   position: absolute;
   z-index: 3;
@@ -121,7 +125,7 @@
   position: absolute;
   display: block;
   content: '';
-  transition: all 500ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 #nav-toggle span:before {
