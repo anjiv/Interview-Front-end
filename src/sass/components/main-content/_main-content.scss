@@ -1,7 +1,11 @@
 // Map content
 .content__map {
-  display: flex;
-  padding: 95px 0;
+  padding: 70px 0 75px;
+
+  @media screen and (min-width: 992px) {
+    display: flex;
+    padding: 95px 0;
+  }
 }
 
 .content__map--image {
@@ -9,18 +13,25 @@
 }
 
 .content__map--text {
-  flex-basis: 50%;
-  padding: 10px 5px 0 0;
-  color: $text-color;
+  color: $heading;
+
+  @media screen and (min-width: 992px) {
+    padding: 10px 5px 0 0;
+    flex-basis: 50%;
+  }
 
   p {
-    padding: 25px 0;
+    padding: 55px 0 25px;
+
+    @media screen and (min-width: 992px) {
+      padding: 25px 0;
+    }
   }
 }
 
 // Testimonials
 .testimonials-wrapper {
-  background-color: $gray;
+  background-color: $testimonial-background;
 }
 
 .testimonials {
@@ -29,16 +40,22 @@
 
 .testimonials__heading {
   text-align: center;
-  color: $text-color;
-  padding-bottom: 40px;
+  color: $heading;
+  padding-bottom: 35px;
+
+  @media screen and (min-width: 992px) {
+    padding-bottom: 40px;
+  }
 }
 
 .testimonials__content {
-  display: flex;
+  @media screen and (min-width: 992px) {
+    display: flex;
 
-  > div {
-    &:nth-child(2) {
-      margin: 0 40px;
+    > div {
+      &:nth-child(2) {
+        margin: 0 40px;
+      }
     }
   }
 }
@@ -52,7 +69,7 @@
   padding: 40px;
   background-color: $white;
   border-radius: 20px;
-  color: #81736f;
+  color: $testimonial-content;
   box-shadow: 1px 3px 3px 2px #d4d4d4;
 }
 
@@ -71,6 +88,11 @@
   display: flex;
   align-items: center;
   margin-top: 20px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 0;
+  }
 }
 
 .testimonials__client--details {
@@ -80,17 +102,19 @@
 }
 
 .client-name {
-  color: $text-color;
+  color: $heading;
 }
 
 .client-position {
-  color: #938783;
-  font-size: $font-size-small;
+  color: $client-position;
+  font-size: $font-size-xs;
 }
 
 // Contact details
 .contact-wrapper {
   background-image: url('../../images/background-2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contact__details {
@@ -100,24 +124,44 @@
 
 .contact__heading {
   color: $white;
-  padding: 5px 0;
+  padding: 0 20px;
+
+  @media screen and (min-width: 992px) {
+    padding: 5px 0;
+  }
 }
 
 .contact__form--first {
-  padding: 30px 0 20px;
+  padding: 30px 0 0;
+
+  @media screen and (min-width: 992px) {
+    padding: 30px 0 20px;
+  }
 }
 
 .contact__subheading {
-  color: #636465;
-  padding: 10px 0;
+  color: $white;
+  padding: 10px 15px;
+
+  @media screen and (min-width: 992px) {
+    padding: 10px 0;
+  }
 }
 
 .input__field {
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 3px;
   border: none;
-  min-width: 255px;
-  margin-right: 20px;
+
+  @media only screen and (max-width: 991px) {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  @media screen and (min-width: 992px) {
+    padding: 10px;
+    min-width: 255px;
+    margin-right: 15px;
+  }
 }
 
 .input__phone {
@@ -125,13 +169,23 @@
 }
 
 .textarea {
-  padding: 10px;
-  width: 815px;
+  padding: 10px 15px;
+  width: 100%;
   border-radius: 3px;
+
+  @media screen and (min-width: 992px) {
+    padding: 10px;
+    width: 815px;
+  }
 }
 
 .contact__button {
-  margin-top: 20px;
+  margin-top: 40px;
+
+  @media screen and (min-width: 992px) {
+    margin-top: 20px;
+  }
+
   .a-btn {
     display: inline-block;
     min-width: 120px;
