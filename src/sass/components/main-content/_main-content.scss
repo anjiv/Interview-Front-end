@@ -71,6 +71,7 @@
   border-radius: 20px;
   color: $testimonial-content;
   box-shadow: 1px 3px 3px 2px #d4d4d4;
+  line-height: 22px;
 }
 
 .testimonials__message--icon {
@@ -104,6 +105,16 @@
 
   @media screen and (min-width: 992px) {
     margin-bottom: 0;
+  }
+}
+
+.quotes {
+  &:before {
+    content: '';
+    width: 25px;
+    height: 20px;
+    display: inline-block;
+    background-image: url('../../images/quotes.png');
   }
 }
 
