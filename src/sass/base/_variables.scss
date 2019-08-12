@@ -1,14 +1,26 @@
 // Font size
-$font-size-small: 14px;
-$font-size-medium: 16px;
-$font-size-large: 20px;
+$font-size-xs: 14px;
+$font-size-small: 16px;
+$font-size-medium: 20px;
+$font-size-large: 28px;
 $font-size-xl: 34px;
 
 // Colors
-$primary: #ee3b00;
-$secondary: #afa5a3;
-$dark-background: #171513;
-$text-color: #484340;
-$gray: #f7f7f7;
 $white: #fff;
 $black: #000;
+$dark-gray: #afa5a3;
+$orange: #ee3b00;
+$dark-puce: #484340;
+$middle-grey: #908481;
+$sonic-silver: #81736f;
+$chinese-black: #171513;
+$guyabano: #f7f7f7;
+
+// Components
+$button: $orange;
+$header-footer: $dark-gray;
+$heading: $dark-puce;
+$testimonial-content: $sonic-silver;
+$client-position: $middle-grey;
+$background: $chinese-black;
+$testimonial-background: $guyabano;

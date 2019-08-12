@@ -1,15 +1,13 @@
 $grid-columns: 12;
 $width: 100%;
-$max-width-mobile: 345px;
 $max-width-desktop: 1200px;
 $gutter: 30px;
 
 .container {
-  max-width: $max-width-mobile;
+  width: 100%;
   margin: auto;
   padding-right: $gutter/2;
   padding-left: $gutter/2;
-
   @media screen and (min-width: 992px) {
     max-width: $max-width-desktop;
   }
@@ -20,12 +18,19 @@ body {
   font-family: sans-serif;
 }
 
-h3 {
+h1 {
   font-size: $font-size-xl;
 }
 
-h4 {
+h2 {
   font-size: $font-size-large;
+}
+
+h3 {
+  font-size: $font-size-medium;
+  @media only screen and (max-width: 991px) {
+    line-height: 30px;
+  }
 }
 
 a {
@@ -34,16 +39,16 @@ a {
 }
 
 p {
-  font-size: $font-size-medium;
+  font-size: $font-size-small;
   line-height: 22px;
 }
 
 .primary-color {
-  color: $primary;
+  color: $button;
 }
 
 .primary-button {
-  background-color: $primary;
+  background-color: $button;
   color: $white;
 }
 
