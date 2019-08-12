@@ -1,15 +1,26 @@
 footer {
-  background-color: $dark-background;
+  background-color: $background;
 }
 
 .footer-wrapper {
   padding: 40px 0;
-  display: flex;
-  justify-content: space-between;
-  color: $secondary;
+  color: $header-footer;
+
+  @media only screen and (max-width: 991px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 992px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .footer__social {
+  @media only screen and (max-width: 991px) {
+    padding-top: 30px;
+  }
+
   img {
     padding: 0 5px;
   }
