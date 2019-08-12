@@ -1,9 +1,35 @@
 <div class="container">
   <div class="header-wrapper">
+    <div class="header__menu--mobile">
+      <div class="hamburger">
+        {% include "../../00-atoms/00-image/image.html.twig" with {
+          image_base_class: "hamburger-icon",
+          img_src: "images/hamburger-icon.png",
+          img_alt: "hamburger-icon"
+        } %}
+      </div>
+      <div class="mobile-menu">
+        {% set items = [{
+          url: '/',
+          title: 'About'
+        },{
+          url: '/',
+          title: 'Services'
+        },{
+          url: '/',
+          title: 'Solution'
+        },{
+          url: '/',
+          title: 'Blog'
+        }]
+        %}
+        {% include "../../01-molecules/00-menu/menu.html.twig" with items %}
+      </div>
+    </div>
     <div class="site__logo">
       <a href="/" class="site__logo--text">Company<span class="primary-color">Logo</span></a>
     </div>
-    <div class="header__menu">
+    <div class="header__menu--desktop">
       {% set items = [{
         url: '/',
         title: 'About',

@@ -1,4 +1,4 @@
-<div class="header__button">
+<div class="header__button--desktop">
   {% include "../../00-atoms/00-image/image.html.twig" with {
     image_base_class: "header-button-icon",
     img_src: "images/header-icon.png",
@@ -7,5 +7,13 @@
   {% include "../../00-atoms/02-button/button.html.twig" with {
     text: "Get In Touch",
     extra_classes: "primary-button"
+  } %}
+</div>
+
+<div class="header__button--mobile">
+  {% include "../../00-atoms/00-image/image.html.twig" with {
+    image_base_class: "header-button-icon",
+    img_src: "images/header-icon.png",
+    img_alt: "header-button-icon"
   } %}
 </div>

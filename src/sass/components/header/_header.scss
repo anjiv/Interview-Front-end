@@ -5,10 +5,23 @@
 
   .site__logo {
     flex-grow: 1;
+
+    @media only screen and (max-width: 991px) {
+      text-align: center;
+    }
   }
 }
 
-.header__menu {
+.header__menu--mobile {
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+}
+
+.header__menu--desktop {
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
   ul {
     display: flex;
 
@@ -18,10 +31,15 @@
   }
 }
 
-.header__button {
+.header__button--desktop {
   position: relative;
+
   .a-btn {
     padding: 10px 20px 10px 45px;
+  }
+
+  @media only screen and (max-width: 991px) {
+    display: none;
   }
 }
 
@@ -31,11 +49,24 @@
   top: 2px;
 }
 
+.header__button--mobile {
+  position: relative;
+  padding: 10px;
+
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+
+  .header-button-icon {
+    left: 0;
+  }
+}
+
 .header {
-  background-color: $dark-background;
+  background-color: $background;
 
   .a-link {
-    color: $secondary;
+    color: $header-footer;
   }
 
   .active,
@@ -48,6 +79,34 @@
 
     span {
       padding: 0 5px;
+    }
+  }
+}
+
+// Hamburger menu
+.hamburger {
+  display: inline-block;
+  position: absolute;
+  z-index: 3;
+}
+
+.mobile-menu {
+  ul {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+    padding: 75px 15px 50px;
+    background: #212121;
+    transition: all 0s ease -0.5s;
+
+    li {
+      padding: 10px 0;
+      .a-link {
+        color: $white;
+      }
     }
   }
 }

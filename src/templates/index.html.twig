@@ -1,23 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
   <title>Axelerant: Interview Frontend</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <header class="header">
     {% include "02-organisms/00-header/header.html.twig" %}
   </header>
+
   <section class="banner">
     {% include "02-organisms/01-banner/banner.html.twig" %}
   </section>
+
   <section class="main-content">
     {% include "02-organisms/02-map-content/map-content.html.twig" %}
     {% include "02-organisms/03-testimonials/testimonials.html.twig" %}
     {% include "02-organisms/04-contact-form/contact-form.html.twig" %}
   </section>
+
   <footer>
     {% include "02-organisms/05-footer/footer.html.twig" %}
   </footer>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="main.js"></script>
+
 </body>
 </html>
