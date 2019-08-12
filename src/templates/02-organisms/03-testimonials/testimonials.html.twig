@@ -8,60 +8,27 @@
         } %}
       </div>
       <div class="testimonials__content">
-        <div class="testimonials__content--details">
-          <div class="testimonials__message">
-            <div class="quotes">
-              Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim. Aenean non rhoncus quam.
-            </div>
-          </div>
-          <div class="testimonials__message--icon"></div>
-          <div class="testimonials__client">
-            {% include "../../00-atoms/00-image/image.html.twig" with {
-              img_src: "images/profile-icon.png",
-              img_alt: "testimonials-profile"
-            } %}
-            <div class="testimonials__client--details">
-              <span class="client-name">CLIENT NAME</span>
-              <span class="client-position">Position, ORG</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonials__content--details">
-          <div class="testimonials__message">
-            <div class="quotes">
-              Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim. Aenean non rhoncus quam. Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim.
-            </div>
-          </div>
-          <div class="testimonials__message--icon"></div>
-          <div class="testimonials__client">
-            {% include "../../00-atoms/00-image/image.html.twig" with {
-              img_src: "images/profile-icon.png",
-              img_alt: "testimonials-profile"
-            } %}
-            <div class="testimonials__client--details">
-              <span class="client-name">CLIENT NAME</span>
-              <span class="client-position">Position, ORG</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonials__content--details">
-          <div class="testimonials__message">
-            <div class="quotes">
-              Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim. Aenean non rhoncus quam. Mauris at quam at mauris venenatis eleifend.
-            </div>
-          </div>
-          <div class="testimonials__message--icon"></div>
-          <div class="testimonials__client">
-            {% include "../../00-atoms/00-image/image.html.twig" with {
-              img_src: "images/profile-icon.png",
-              img_alt: "testimonials-profile"
-            } %}
-            <div class="testimonials__client--details">
-              <span class="client-name">CLIENT NAME</span>
-              <span class="client-position">Position, ORG</span>
-            </div>
-          </div>
-        </div>
+        {% set items = [{
+          description: 'Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim. Aenean non rhoncus quam.',
+          client_name: 'CLIENT NAME',
+          client_position: 'Position, ORG',
+          img_src: 'images/profile-icon.png',
+          img_alt: 'testimonials-profile'
+        },{
+          description: 'Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim. Aenean non rhoncus quam. Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim.',
+          client_name: 'CLIENT NAME',
+          client_position: 'Position, ORG',
+          img_src: 'images/profile-icon.png',
+          img_alt: 'testimonials-profile'
+        },{
+          description: 'Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim. Aenean non rhoncus quam. Mauris at quam at mauris venenatis eleifend.',
+          client_name: 'CLIENT NAME',
+          client_position: 'Position, ORG',
+          img_src: 'images/profile-icon.png',
+          img_alt: 'testimonials-profile'
+        }]
+        %}
+        {% include "../../01-molecules/03-testimonial-block/testimonial-block.html.twig" with items %}
       </div>
     </div>
   </div>
