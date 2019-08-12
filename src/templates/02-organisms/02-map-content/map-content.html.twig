@@ -1,20 +1,11 @@
 <div class="container">
   <div class="content__map">
     <div class="content__map--text">
-      {% include "../../00-atoms/03-heading/heading.html.twig" with {
-        heading_level: 2,
-        heading: "Mauris id bibendum est. Proin dapibus sollicitudin iaculis, Maecenas condimentum maximus laoreet."
-      } %}
-      {% include "../../00-atoms/04-paragraph/paragraph.html.twig" with {
-        paragraph_content: "In maximus euismod egestas. Fusce tincidunt posuere est non elementum. Maximus euismod egestas. Fusce tincidunt posuere est non elementum. Maximus euismod egestas. Fusce tincidunt posuere est non elementum. Maximus euismod egestas. Fusce tincidunt posuere est non elementum. Maximus euismod egestas. Fusce tincidunt posuere est non elementum."
-      } %}
+      {% include "../../00-atoms/03-heading/heading.html.twig" with heading %}
+      {% include "../../00-atoms/04-paragraph/paragraph.html.twig" with paragraph %}
     </div>
     <div class="content__map--image">
-      {% include "../../00-atoms/00-image/image.html.twig" with {
-        image_base_class: "map-image",
-        img_src: "images/map.png",
-        img_alt: "map-image"
-      } %}
+      {% include "../../00-atoms/00-image/image.html.twig" with image %}
     </div>
   </div>
 </div>

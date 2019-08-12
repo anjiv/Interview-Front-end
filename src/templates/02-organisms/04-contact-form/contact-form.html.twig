@@ -2,19 +2,12 @@
   <div class="container">
     <div class="contact__details">
       <div class="contact__heading">
-        {% include "../../00-atoms/03-heading/heading.html.twig" with {
-          heading_level: 2,
-          heading: "Convinced To Work With Us?"
-        } %}
+        {% include "../../00-atoms/03-heading/heading.html.twig" with headingOne %}
       </div>
       <div class="contact__subheading">
-        {% include "../../00-atoms/03-heading/heading.html.twig" with {
-          heading_level: 3,
-          heading: "Company has helped agencies keep their promises to 
-          clients since 2005."
-        } %}
+        {% include "../../00-atoms/03-heading/heading.html.twig" with headingTwo %}
       </div>
-      {% include "../../01-molecules/02-form/form.html.twig" %}
+      {% include "../../01-molecules/02-form/form.html.twig" with form %}
     </div>
   </div>
 </div>

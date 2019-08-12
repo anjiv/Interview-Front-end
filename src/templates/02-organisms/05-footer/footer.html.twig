@@ -1,34 +1,15 @@
 <div class="container">
   <div class="footer-wrapper">
     <div class="footer__copyright">
-      © 2017 Company. All Rights Reserved.
+      {{ copyright_text }}
     </div>
     <div class="footer__social">
-      Follow us on:
-      <a href="/">
-        {% include "../../00-atoms/00-image/image.html.twig" with {
-          img_src: "images/facebook-icon.png",
-          img_alt: "facebook-icon"
-        } %}
-      </a>
-      <a href="/">
-        {% include "../../00-atoms/00-image/image.html.twig" with {
-          img_src: "images/linkedin-icon.png",
-          img_alt: "linkedin-icon"
-        } %}
-      </a>
-      <a href="/">
-        {% include "../../00-atoms/00-image/image.html.twig" with {
-          img_src: "images/twitter-icon.png",
-          img_alt: "twitter-icon"
-        } %}
-      </a>
-      <a href="/">
-        {% include "../../00-atoms/00-image/image.html.twig" with {
-          img_src: "images/mail-icon.png",
-          img_alt: "mail-icon"
-        } %}
-      </a>
+      {{ label }}
+      {% for socialIcon in socialIcons %}
+        <a href="/">
+          {% include "../../00-atoms/00-image/image.html.twig" with socialIcon %}
+        </a>
+      {% endfor %}
     </div>
   </div>
 </div>

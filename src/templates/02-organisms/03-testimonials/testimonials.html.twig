@@ -2,33 +2,26 @@
   <div class="container">
     <div class="testimonials">
       <div class="testimonials__heading">
-        {% include "../../00-atoms/03-heading/heading.html.twig" with {
-          heading_level: 2,
-          heading: "Testimonials"
-        } %}
+        {% include "../../00-atoms/03-heading/heading.html.twig" with heading %}
       </div>
       <div class="testimonials__content">
-        {% set items = [{
-          description: 'Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim. Aenean non rhoncus quam.',
-          client_name: 'CLIENT NAME',
-          client_position: 'Position, ORG',
-          img_src: 'images/profile-icon.png',
-          img_alt: 'testimonials-profile'
-        },{
-          description: 'Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim. Aenean non rhoncus quam. Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim.',
-          client_name: 'CLIENT NAME',
-          client_position: 'Position, ORG',
-          img_src: 'images/profile-icon.png',
-          img_alt: 'testimonials-profile'
-        },{
-          description: 'Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim. Aenean non rhoncus quam. Mauris at quam at mauris venenatis eleifend.',
-          client_name: 'CLIENT NAME',
-          client_position: 'Position, ORG',
-          img_src: 'images/profile-icon.png',
-          img_alt: 'testimonials-profile'
-        }]
-        %}
-        {% include "../../01-molecules/03-testimonial-block/testimonial-block.html.twig" with items %}
+        {% for item in items %}
+          <div class="testimonials__content--details">
+            <div class="testimonials__message">
+              <div class="quotes">
+                {{ item.description }}
+              </div>
+            </div>
+            <div class="testimonials__message--icon"></div>
+            <div class="testimonials__client">
+              {% include "../../00-atoms/00-image/image.html.twig" with item.img %}
+              <div class="testimonials__client--details">
+                <span class="client-name">{{ item.client_name }}</span>
+                <span class="client-position">{{ item.client_position }}</span>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
       </div>
     </div>
   </div>

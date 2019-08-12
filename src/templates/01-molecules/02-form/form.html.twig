@@ -1,25 +1,11 @@
 <div class="contact__form--first">
-  {% include "../../00-atoms/05-input/input.html.twig" with {
-    placeholder_text: "Fullname",
-    extra_classes: "input__fullname"
-  } %}
-  {% include "../../00-atoms/05-input/input.html.twig" with {
-    placeholder_text: "EmailAddress",
-    extra_classes: "input__email"
-  } %}
-  {% include "../../00-atoms/05-input/input.html.twig" with {
-    placeholder_text: "PhoneNumber",
-    extra_classes: "input__phone"
-  } %}
+  {% include "../../00-atoms/05-input/input.html.twig" with fullname %}
+  {% include "../../00-atoms/05-input/input.html.twig" with email %}
+  {% include "../../00-atoms/05-input/input.html.twig" with phone %}
 </div>
 <div class="contact__form--second">
-  {% include "../../00-atoms/06-textarea/textarea.html.twig" with {
-    placeholder_text: "Message in Brief"
-  } %}
+  {% include "../../00-atoms/06-textarea/textarea.html.twig" with message %}
 </div>
 <div class="contact__button">
-  {% include "../../00-atoms/02-button/button.html.twig" with {
-    extra_classes: "primary-button",
-    text: "Submit"
-  } %}
+  {% include "../../00-atoms/02-button/button.html.twig" with button %}
 </div>

@@ -1,3 +1,153 @@
+{% set page = {
+  header: {
+    items : [{
+      url: '/',
+      title: 'About'
+    },{
+      url: '/',
+      title: 'Services'
+    },{
+      url: '/',
+      title: 'Solution'
+    },{
+      url: '/',
+      title: 'Blog'
+    }],
+    button: {
+      image: {
+        image_base_class: "header-button-icon",
+        img_src: "images/header-icon.png",
+        img_alt: "header-button-icon"
+      },
+      header_button: {
+        text: "Get In Touch",
+        extra_classes: "primary-button"
+      }
+    }
+  },
+  banner: {
+    heading: {
+      heading_level: 1,
+      heading: "Integer bibendum sit amet arcu vel egestas."
+    },
+    serviceIcons : [{
+      image: {
+        image_base_class: "banner-service",
+        img_src: "images/service-icon-1.png",
+        img_alt: "service-icon-1"
+      },
+      service_name: "Service name"
+    }, {
+      image: {
+        image_base_class: "banner-service",
+        img_src: "images/service-icon-2.png",
+        img_alt: "service-icon-2"
+      },
+      service_name: "Service name"
+    },{
+      image: {
+        image_base_class: "banner-service",
+        img_src: "images/service-icon-3.png",
+        img_alt: "service-icon-3"
+      },
+      service_name: "Service name"
+    }]
+  },
+  mapContent : {
+    heading: {
+      heading_level: 2,
+      heading: "Mauris id bibendum est. Proin dapibus sollicitudin iaculis, Maecenas condimentum maximus laoreet."
+    },
+    paragraph: {
+      paragraph_content: "In maximus euismod egestas. Fusce tincidunt posuere est non elementum. Maximus euismod egestas. Fusce tincidunt posuere est non elementum. Maximus euismod egestas. Fusce tincidunt posuere est non elementum. Maximus euismod egestas. Fusce tincidunt posuere est non elementum. Maximus euismod egestas. Fusce tincidunt posuere est non elementum."
+    },
+    image: {
+      image_base_class: "map-image",
+      img_src: "images/map.png",
+      img_alt: "map-image"
+    }
+  },
+  testimonial: {
+    heading: {
+      heading_level: 2,
+      heading: "Testimonials"
+    },
+    items : [{
+      description: 'Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim. Aenean non rhoncus quam.',
+      client_name: 'CLIENT NAME',
+      client_position: 'Position, ORG',
+      img: {
+        img_src: 'images/profile-icon.png',
+        img_alt: 'testimonials-profile'
+      }
+      },{
+        description: 'Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim. Aenean non rhoncus quam. Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim.',
+        client_name: 'CLIENT NAME',
+        client_position: 'Position, ORG',
+        img: {
+          img_src: 'images/profile-icon.png',
+          img_alt: 'testimonials-profile'
+        }
+      },{
+        description: 'Mauris at quam at mauris venenatis eleifend. Nullam eleifend odio a pretium dignissim. Aenean non rhoncus quam. Mauris at quam at mauris venenatis eleifend.',
+        client_name: 'CLIENT NAME',
+        client_position: 'Position, ORG',
+        img: {
+          img_src: 'images/profile-icon.png',
+          img_alt: 'testimonials-profile'
+        }
+    }]
+  },
+  contactForm: {
+    headingOne: {
+      heading_level: 2,
+      heading: "Convinced To Work With Us?"
+    },
+    headingTwo: {
+      heading_level: 3,
+      heading: "Company has helped agencies keep their promises to clients since 2005."
+    },
+    form: {
+      fullname: {
+        placeholder_text: "Fullname",
+        extra_classes: "input__fullname"
+      },
+      email: {
+        placeholder_text: "EmailAddress",
+        extra_classes: "input__email"
+      },
+      phone: {
+        placeholder_text: "PhoneNumber",
+        extra_classes: "input__phone"
+      },
+      message: {
+        placeholder_text: "Message in Brief"
+      },
+      button: {
+        extra_classes: "primary-button",
+        text: "Submit"
+      }
+    }
+  },
+  footer: {
+    socialIcons : [{
+      img_src: "images/facebook-icon.png",
+      img_alt: "facebook-icon"
+    },{
+      img_src: "images/linkedin-icon.png",
+      img_alt: "linkedin-icon"
+    },{
+      img_src: "images/twitter-icon.png",
+      img_alt: "twitter-icon"
+    },{
+      img_src: "images/mail-icon.png",
+      img_alt: "mail-icon"
+    }],
+    copyright_text : "© 2017 Company. All Rights Reserved.",
+    label: "Follow us on:"
+  }
+} %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,23 +157,22 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <header class="header">
-    {% include "02-organisms/00-header/header.html.twig" %}
+    {% include "02-organisms/00-header/header.html.twig" with page.header %}
   </header>
 
   <section class="banner">
-    {% include "02-organisms/01-banner/banner.html.twig" %}
+    {% include "02-organisms/01-banner/banner.html.twig" with page.banner %}
   </section>
 
   <section class="main-content">
-    {% include "02-organisms/02-map-content/map-content.html.twig" %}
-    {% include "02-organisms/03-testimonials/testimonials.html.twig" %}
-    {% include "02-organisms/04-contact-form/contact-form.html.twig" %}
+    {% include "02-organisms/02-map-content/map-content.html.twig" with page.mapContent %}
+    {% include "02-organisms/03-testimonials/testimonials.html.twig" with page.testimonial %}
+    {% include "02-organisms/04-contact-form/contact-form.html.twig" with page.contactForm %}
   </section>
 
   <footer>
-    {% include "02-organisms/05-footer/footer.html.twig" %}
+    {% include "02-organisms/05-footer/footer.html.twig" with page.footer %}
   </footer>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
